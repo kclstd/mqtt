@@ -7,11 +7,11 @@ from scipy import stats
 
 df = pd.read_csv('mqtt_dataset.csv')
 
-# Calculate standard deviation for the entire dataset
+# standard deviation for the entire dataset
 std_dev = df['mqtt.msgtype'].std()
 print(f"Standard Deviation of mqtt.msgtype: {std_dev:.4f}")
 
-# Calculate interquartile range (IQR)
+# interquartile range (IQR)
 q1 = df['mqtt.msgtype'].quantile(0.25)
 q3 = df['mqtt.msgtype'].quantile(0.75)
 iqr = q3 - q1
